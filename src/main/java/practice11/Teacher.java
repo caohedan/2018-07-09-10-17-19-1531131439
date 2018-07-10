@@ -3,7 +3,7 @@ package practice11;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class Teacher extends Person {
+public class Teacher extends Person implements LeaderAssignedListener, JoinListener {
     private int id;
     private String name;
     private int age;
@@ -24,11 +24,10 @@ public class Teacher extends Person {
     }
 
     public String introduce() {
+        ArrayList<String> list = new ArrayList();
         if (this.getClasses().size() == 0)
             return super.introduce() + " I am a Teacher. I teach No Class.";
-        else
-        {
-            ArrayList<String> list = new ArrayList();
+        else{
             for(Klass temp:this.getClasses()){
                 list.add(String.valueOf(temp.getNumber()));
             }
@@ -73,4 +72,6 @@ public class Teacher extends Person {
         String tempStr = "I am "+this.getName()+". I know "+student.getName()+" has joined "+klass.getDisplayName()+".";
         System.out.print(tempStr+"\n");
     }
+
+
 }

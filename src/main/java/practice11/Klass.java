@@ -10,9 +10,11 @@ public class Klass {
     List<Student> members = new ArrayList<Student>();
     public Klass(int number) {
         this.number = number;
+        leaderAssignedListeners = new LinkedList();
+        joinListeners = new LinkedList();
     }
-    LinkedList<Teacher> leaderAssignedListeners = new LinkedList();
-    LinkedList<Teacher>  joinListeners = new LinkedList();
+    LinkedList<LeaderAssignedListener> leaderAssignedListeners ;
+    LinkedList<JoinListener>  joinListeners ;
     public int getNumber() {
         return number;
     }
@@ -32,9 +34,6 @@ public class Klass {
         }
     }
 
-    public List<Student> getMembers() {
-        return members;
-    }
 
     public Student getLeader() {
         return leader;
@@ -48,23 +47,23 @@ public class Klass {
         return this.leader!=null && student !=null && student.equal(this.leader);
     }
 
-    public void registerAssignLeaderListener(Teacher listener){
+    public void registerAssignLeaderListener(LeaderAssignedListener listener){
         this.leaderAssignedListeners.add(listener);
     }
 
     public void _notifyLeaderAssigned(Student leader){
-        for(Teacher leaderAssignedListener:leaderAssignedListeners)
+        for(LeaderAssignedListener leaderAssignedListener:leaderAssignedListeners)
         {
             leaderAssignedListener.nofityLeaderAssigned(leader,this);
         }
     }
 
-    public void registerJoinListener(Teacher listener){
+    public void registerJoinListener(JoinListener listener){
         this.joinListeners.add(listener);
     }
 
     public void _nofiyJoined(Student student) {
-        for(Teacher leaderAssignedListener:joinListeners)
+        for(JoinListener leaderAssignedListener:joinListeners)
         {
             leaderAssignedListener.nofiyJoined(student,this);
         }
