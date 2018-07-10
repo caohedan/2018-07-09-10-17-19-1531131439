@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry excluding="practice02/|practice04/|practice06/|practice08/|practice11/|practice03/|practice05/|practice07/|practice09/|practice10/" kind="src" path="src/test/java"/>
+	<classpathentry kind="src" path="src/test/java/practice02"/>
+	<classpathentry kind="src" path="src/test/java/practice03"/>
+	<classpathentry kind="src" path="src/test/java/practice04"/>
+	<classpathentry kind="src" path="src/test/java/practice05"/>
+	<classpathentry kind="src" path="src/test/java/practice06"/>
+	<classpathentry kind="src" path="src/test/java/practice07"/>
+	<classpathentry kind="src" path="src/test/java/practice08"/>
+	<classpathentry kind="src" path="src/test/java/practice09"/>
+	<classpathentry kind="src" path="src/test/java/practice10"/>
+	<classpathentry kind="src" path="src/test/java/practice11"/>
+	<classpathentry kind="lib" path="gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
