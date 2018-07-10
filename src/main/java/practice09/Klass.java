@@ -38,7 +38,4 @@ public class Klass {
     public boolean isLeader(Student student){
         return this.leader!=null && student !=null && student.equal(this.leader);
     }
-    public boolean verifyLeader(Student student){
-        return this.leader !=null && this.leader.is(student);
-    }
 }

@@ -26,7 +26,7 @@ public class Teacher extends Person {
         {
             ArrayList<String> list = new ArrayList();
             for(Klass temp:this.getClasses()){
-               list.add(String.valueOf(temp.getNumber()));
+                list.add(String.valueOf(temp.getNumber()));
             }
             String message = String.join(", ", list);
             return super.introduce() + " I am a Teacher. I teach Class " + message + ".";
@@ -42,7 +42,7 @@ public class Teacher extends Person {
         String teachString = " I don't teach " + student.getName() + ".";
         for(Klass temp:this.getClasses()){
             if (temp.equal(student.getKlass()))
-            teachString = " I teach " + student.getName() + ".";
+                teachString = " I teach " + student.getName() + ".";
         }
 
         return this.basicIntroduce() + teachString;
