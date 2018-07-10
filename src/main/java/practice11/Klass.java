@@ -8,13 +8,20 @@ public class Klass {
     int number;
     Student leader;
     List<Student> members = new ArrayList<Student>();
+    LinkedList<LeaderAssignedListener> leaderAssignedListeners ;
+    LinkedList<JoinListener>  joinListeners ;
     public Klass(int number) {
         this.number = number;
         leaderAssignedListeners = new LinkedList();
         joinListeners = new LinkedList();
     }
-    LinkedList<LeaderAssignedListener> leaderAssignedListeners ;
-    LinkedList<JoinListener>  joinListeners ;
+    public Klass(int number,Computer computer) {
+        this.number = number;
+        leaderAssignedListeners = new LinkedList();
+        joinListeners = new LinkedList();
+        this.registerJoinListener(computer);
+        this.registerAssignLeaderListener(computer);
+    }
     public int getNumber() {
         return number;
     }
