@@ -1,6 +1,4 @@
 package practice09;
-
-
 public class Teacher extends Person{
     private int id;
     private  String name;
